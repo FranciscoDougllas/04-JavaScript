@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos</title>
+
+    <style>
+
+    </style>
+</head>
+<body>
+    <h1>Eventos</h1>
+    <button id="my-button">Clique aqui</button>
+
+    <script>
+        // Selecionando o botão
+        const myButton = document.getElementById('my-button');
+
+        // Adicionando um evento de clique ao botão
+        myButton.addEventListener('click', function() {
+            alert('Você clicou no botão');
+            document.write('Você clicou no botão');
+        });
+    </script>
+</body>
+</html>

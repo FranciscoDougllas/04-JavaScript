@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alterando Elementos</title>
+
+    <style>
+        h1{
+            color: blue;
+        }
+        body{
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Esse aqui e um titulo</h1>
+    <h2>Titulo de nivel 2</h2>
+    <h3>Titulo de nivel 3</h3>
+
+    <p>Isso e um paragrafo</p>
+
+
+    <script>
+        // Alterando o conteudo de um elemento
+        document.querySelector('h1').textContent = 'Novo Titulo Teste';
+
+        // Alterando o conteudo de um elemento
+        document.querySelector('h2').innerHTML = 'Titulo <small>de nivel 2</small>';
+
+        //Criando elementos
+        var novoTitulo = document.createElement('h2');
+        novoTitulo.textContent = 'Titulo de nivel 2ABCV';
+
+        document.body.appendChild(novoTitulo);
+
+        //Removendo elementos
+        document.body.removeChild(document.querySelector('h3'));
+        if(document.querySelector('h3')){
+            document.body.removeChild(document.querySelector('h3'));
+        }
+
+        //Alterando atributos
+        document.querySelector('h1').setAttribute('id', 'titulo');
+
+        //Alterando com replace
+        var text = document.createElement('h2');
+        text.textContent = "Meu Novo Titulo";
+        document.body.replaceChild(text, document.querySelector('h2'));
+
+        //Criando nos de texto com createTextNode
+        var texto = document.createTextNode('Texto de teste');
+        document.body.appendChild(texto);
+
+        //Alterando atributos
+        document.querySelector('h1').setAttribute('class', 'titulo-principal');
+        document.querySelector('h1').removeAttribute('class');
+
+        //Alterando estilos
+        document.querySelector('h1').style.color = 'red';
+        document.querySelector('h1').style.backgroundColor = 'black';
+
+        //Altura e Largura dos elementos
+        document.querySelector('h1').style.width = '100px';
+        document.querySelector('h1').style.height = '100px';
+
+        //Utilizando o getComputedStyle
+        var estilo = getComputedStyle(document.querySelector('h1'));
+        console.log(estilo.color);
+
+        //Utilizando o offsetWidth e offsetHeight
+        console.log(document.querySelector('h1').offsetWidth);
+        console.log(document.querySelector('h1').offsetHeight);
+
+        //Desconsiderando as bordas com clientWidth e clientHeight
+        console.log(document.querySelector('h1').clientWidth);
+        console.log(document.querySelector('h1').clientHeight);
+
+        //Posicao dos elementos na tela
+        console.log(document.querySelector('h1').offsetTop);
+        console.log(document.querySelector('h1').offsetLeft);
+    </script>
+</body>
+</html>

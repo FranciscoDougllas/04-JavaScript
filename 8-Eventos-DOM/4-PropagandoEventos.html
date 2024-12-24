@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Propagando eventos</h1>
+
+    <div id="btn-container">
+        <button id="btn">Clique aqui</button>
+    </div>
+
+    <script>
+        const btn = document.querySelector('#btn');
+        const btnContainer = document.querySelector('#btn-container');
+
+        btnContainer.addEventListener('click', function(e) {
+            console.log(e.target.id);
+        });
+
+        btn.addEventListener('click', function(e) {
+            e.stopPropagation();
+            console.log(e.target.id);
+        });
+    </script>
+</body>
+</html>

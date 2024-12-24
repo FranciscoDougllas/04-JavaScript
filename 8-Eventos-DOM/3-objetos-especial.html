@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event (e)</title>
+</head>
+<body>
+    <h1 id="my-h1">Objeto do Evento</h1>
+
+    <script>
+        const myTitle = document.querySelector('#my-h1');
+        myTitle.addEventListener('click', function(e) {
+            myTitle.style.color = 'red';
+            myTitle.style.textDecoration = 'underline';
+        });
+    </script>
+</body>
+</html>

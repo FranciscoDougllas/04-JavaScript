@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Eventos de Teclas</h1>
+
+
+    <script>
+        //Quando solto a tecla
+        document.addEventListener('keydown', function(e) {
+            console.log(e.code);
+            document.write(e.code);
+        })
+
+        document.addEventListener('keyup', function(e) {
+            console.log(e.code);
+            document.write(e.code);
+        })
+    </script>
+</body>
+</html>

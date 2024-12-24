@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos Padrao</title>
+</head>
+<body>
+    <h1>Link direto</h1>
+
+    <a href="https://www.google.com">Link para o Google</a>
+
+    <script>
+        const link = document.querySelector('a');
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            document.write('Link clicado');
+        });
+    </script>
+</body>
+</html>

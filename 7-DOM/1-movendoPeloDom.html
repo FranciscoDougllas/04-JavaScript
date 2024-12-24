@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movendo-se pelo DOM</title>
+</head>
+<body>
+    <header>
+        <h1 id="title">Titulo</h1>
+        <nav>
+            <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="">Produtos</a></li>
+                <li><a href="">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main-container">
+        <div class="product">
+            <h2>Produto 1</h2>
+            <p>Descricao</p>
+        </div>
+
+        <div class="product">
+            <h2>Produto 2</h2>
+            <p>Descricao</p>
+        </div>
+    </main>
+
+    <footer>
+        <p>Rodape</p>
+    </footer>
+
+    <!--Adicionando o JavaScript-->
+    <script>
+        //Pegando o elemento pelo ID
+        const title = document.getElementById('title');
+        console.log(title);
+
+        //Pegando o elemento pela tag
+        const nav = document.getElementsByTagName('nav');
+        console.log(nav);
+
+        //Pegando o elemento pela classe
+        const product = document.getElementsByClassName('product');
+        console.log(product);
+
+        //Pegando o elemento pelo seletor
+        const main = document.querySelector('#main-container');
+        console.log(main);
+
+        //Pegando o elemento pelo seletor
+        const footer = document.querySelector('footer');
+        console.log(footer);
+
+        //Pegando todos os elementos pela classe
+        const todos = document.querySelectorAll('.product');
+        console.log(todos);
+    </script>
+</body>
+</html>
